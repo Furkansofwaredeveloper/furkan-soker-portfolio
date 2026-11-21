@@ -183,6 +183,8 @@ section.block{position:relative;padding:clamp(96px,13vw,170px) var(--gutter)}
 .devices .shot.phone.mini{position:absolute;right:0;bottom:0;width:27%;max-width:200px;border-radius:26px;padding:6px;margin:0;box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 0 0 1px var(--border)}
 .devices .shot.phone.mini img{border-radius:21px}
 @media (max-width:900px){.devices{padding:0 10% 16% 0}.devices .shot.phone.mini{width:32%}}
+.devices.pair{max-width:500px;margin:0 auto;padding:0 18% 8% 0}
+.devices.pair .shot.phone.mini{width:40%}
 .shot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(191,227,255,.08)}
 .case-tag{display:flex;align-items:baseline;gap:14px}
 .case-tag .idx{color:var(--light)}
@@ -384,7 +386,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="mono" data-i18n="work.kicker">Selected work</span>
-        <h2 id="work-h" data-i18n="work.h2">Eight things I built. Five you can open right now.</h2>
+        <h2 id="work-h" data-i18n="work.h2">Nine things I built. Six you can open right now.</h2>
         <p class="lede" data-i18n="work.lede">Each one started as a loose idea. Here is the goal, what I built, and where it stands today.</p>
       </div>
 
@@ -517,6 +519,24 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
             <a class="live" href="https://food-order-henna-ten.vercel.app" target="_blank" rel="noopener"><span data-i18n="kv.live">Open the live site</span> <span aria-hidden="true">↗</span></a>
           </div>
         </article>
+
+        <article class="case reveal">
+          <div class="devices pair">
+            <div class="shot phone"><img src="assets/work-wordcards.jpg" alt="WordCards home screen: 3,597 words, overall progress and a Start studying button" data-i18n-alt="wc.alt" loading="lazy" width="600" height="976"></div>
+            <div class="shot phone mini"><img src="assets/work-wordcards-card.jpg" alt="A WordCards flash card: the word Bowl with its pronunciation and a Listen button" data-i18n-alt="wc.altm" loading="lazy" width="600" height="838"></div>
+          </div>
+          <div>
+            <div class="case-tag"><span class="mono idx">09</span><span class="mono" data-i18n="wc.tag">Mobile app · Language learning</span></div>
+            <h3>WordCards</h3>
+            <p class="pitch" data-i18n="wc.pitch">The 3,000 most used English words, one card at a time.</p>
+            <dl>
+              <div><dt class="mono" data-i18n="l.goal">Goal</dt><dd data-i18n="wc.goal">Teach the English words people meet most. The app was built by picking the 3,000 most used ones.</dd></div>
+              <div><dt class="mono" data-i18n="l.built">What I built</dt><dd data-i18n="wc.built">Expo and React Native in TypeScript. Flip a card for the Turkish meaning and pronunciation, swipe right if you know it, left if you don't, and hear every word spoken aloud.</dd></div>
+              <div><dt class="mono" data-i18n="l.result">Result</dt><dd data-i18n="wc.result">The deck holds 3,597 cards. Words you miss come back four hours later, and progress stays on the phone.</dd></div>
+            </dl>
+            <div class="chips"><span>Expo</span><span>React Native</span><span>TypeScript</span><span>Expo Speech</span></div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -647,7 +667,7 @@ const TR = {
   'hero.cue': 'Kaydır',
   'cta.work': 'İşlere bak', 'cta.contact': 'Projeni anlat',
   'work.kicker': 'Seçili işler',
-  'work.h2': 'Yaptığım sekiz iş. Beşini şu an açabilirsin.',
+  'work.h2': 'Yaptığım dokuz iş. Altısını şu an açabilirsin.',
   'yy.alt': 'YumYumAI ana sayfası: malzemelerinden tarif ya da yakındaki restoranları bul',
   'yy.tag': 'Mobil ve web uygulaması · Yapay zekâ',
   'yy.altm': 'YumYumAI mobil uygulama ana ekranı: Tarif Bul ve Restoran Bul',
@@ -674,6 +694,13 @@ const TR = {
   'fo.goal': 'Bir sipariş uygulamasının ihtiyaç duyduğu tüm akışı göstermek.',
   'fo.built': 'React ve SCSS. Kategori filtreli menü, canlı sepet, giriş sayfaları ve ödeme simülasyonu.',
   'fo.result': 'Demo olarak yayında. Telefon, tablet ve masaüstünde çalışır.',
+  'wc.alt': 'Kelime Kartları ana ekranı: 3.597 kelime, genel ilerleme ve Çalışmaya Başla düğmesi',
+  'wc.altm': 'Bir kelime kartı: Bowl kelimesi, okunuşu ve Dinle düğmesi',
+  'wc.tag': 'Mobil uygulama · Dil öğrenme',
+  'wc.pitch': 'En çok kullanılan 3.000 İngilizce kelime, her seferinde bir kart.',
+  'wc.goal': 'İnsanların en sık karşılaştığı İngilizce kelimeleri öğretmek. Uygulama, en çok kullanılan 3.000 kelime seçilerek hayata geçirildi.',
+  'wc.built': 'TypeScript ile Expo ve React Native. Kartı çevirince Türkçe anlamı ve okunuşu çıkıyor, biliyorsan sağa, bilmiyorsan sola kaydırıyorsun, her kelimeyi sesli dinleyebiliyorsun.',
+  'wc.result': 'Destede 3.597 kart var. Bilmediğin kelimeler dört saat sonra geri geliyor, ilerleme telefonda saklanıyor.',
   'work.lede': 'Hepsi dağınık bir fikir olarak başladı. Hedef neydi, ne yaptım, bugün nerede duruyor, hepsi burada.',
   'l.goal': 'Hedef', 'l.built': 'Ne yaptım', 'l.result': 'Sonuç',
   'pp.alt': 'iPhone\'da Paperpin ana ekranı: ızgara ya da serbest kolaj başlat',

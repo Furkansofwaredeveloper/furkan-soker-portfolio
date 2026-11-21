@@ -3,7 +3,7 @@
 Personal portfolio site. One page, plain HTML, CSS and JavaScript, no build step.
 
 - **Scroll film hero:** a short AI-generated video plays forward as you scroll down and backward as you scroll up. Phones and reduced-motion visitors get a still hero instead.
-- **Eight projects:** YumYumAI, ExcelToWeb, Paperpin, Whey Protein, Kavrul, AutoForge, AI Growth OS and FoodOrder.
+- **Nine projects:** YumYumAI, ExcelToWeb, Paperpin, Whey Protein, Kavrul, AutoForge, AI Growth OS, FoodOrder and WordCards.
 - **English and Turkish:** switch with the EN / TR button. The choice is remembered.
 - **Hold to compile:** a small press-and-hold moment in the "How I work" section.
 

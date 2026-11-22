@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/og.jpg?v=3">
 <meta property="og:url" content="https://example.com/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c1220'/%3E%3Cg stroke='%23bfe3ff' stroke-width='1.6' opacity='.85'%3E%3Cpath d='M8 9v14M16 9v14M24 9v14M8 23h16'/%3E%3C/g%3E%3Ccircle cx='16' cy='23' r='3' fill='%23ff7a59'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c1220'/%3E%3Cg transform='translate(1.9 6.8) scale(.44)' fill='none'%3E%3Cg stroke='%23eef3fb' stroke-width='4.6'%3E%3Cpath d='M11 6 3 21l8 15'/%3E%3Cpath d='M53 6l8 15-8 15'/%3E%3Cpath d='M46.5 8H38a6.5 6.5 0 0 0 0 13h2a6.5 6.5 0 0 1 0 13h-9'/%3E%3C/g%3E%3Cpath fill='%23eef3fb' d='M15 6h14v4.2H19.2V18.9H27v4.2H19.2V36H15z'/%3E%3Ccircle cx='25' cy='31.6' r='3.8' fill='%23ff7a59'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500&family=Martian+Mono:wght@400&display=swap" rel="stylesheet">
@@ -61,7 +61,11 @@ p{margin:0}
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px var(--gutter);transition:background .5s var(--ease-out),backdrop-filter .5s}
 .nav.solid{background:rgba(12,18,32,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--border)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:600 17px/1 var(--f-display);letter-spacing:-.01em;text-shadow:var(--tshadow)}
-.brand svg{width:26px;height:26px}
+.brand svg{width:auto;height:28px;flex:none}
+.brand-t{display:flex;flex-direction:column;gap:5px}
+.brand-r{font:400 8.5px/1 var(--f-mono);letter-spacing:.28em;text-transform:uppercase;color:var(--light)}
+@media (max-width:360px){.brand-r{display:none}}
+@media (min-width:900px){.brand{font-size:19px}.brand svg{height:32px}.brand-r{font-size:9.5px}}
 .nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
 .nav ul a{text-decoration:none;font-size:15px;color:var(--text-secondary);transition:color .3s var(--ease-out);text-shadow:var(--tshadow)}
 .nav ul a:hover{color:var(--text-primary)}
@@ -317,8 +321,8 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 
 <nav class="nav" id="nav" aria-label="Main">
   <a class="brand" href="#top" aria-label="Furkan Söker, home">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><g stroke="#bfe3ff" stroke-width="1.6" opacity=".85" fill="none"><path d="M8 7v16M16 7v16M24 7v16M6 23h20"/></g><circle cx="16" cy="23" r="3" fill="#ff7a59"/></svg>
-    Furkan Söker
+    <svg viewBox="0 0 64 42" fill="none" aria-hidden="true"><g stroke="#eef3fb" stroke-width="4.2"><path d="M11 6 3 21l8 15"/><path d="M53 6l8 15-8 15"/><path d="M46.5 8H38a6.5 6.5 0 0 0 0 13h2a6.5 6.5 0 0 1 0 13h-9"/></g><path fill="#eef3fb" d="M15 6h14v4.2H19.2V18.9H27v4.2H19.2V36H15z"/><circle cx="25" cy="31.6" r="3.4" fill="#ff7a59"/></svg>
+    <span class="brand-t"><span>Furkan Söker</span><span class="brand-r">Software developer</span></span>
   </a>
   <ul>
     <li><a href="#work" data-i18n="nav.work">Work</a></li>

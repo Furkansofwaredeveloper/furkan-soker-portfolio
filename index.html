@@ -100,7 +100,7 @@ p{margin:0}
 .band .btn{text-shadow:none}
 .b1{left:var(--gutter);top:50%;transform:translateY(-50%);width:min(620px,46vw);--sa:.7}
 .b2{left:var(--gutter);top:50%;transform:translateY(-50%);width:min(560px,42vw);--sa:.74}
-.b3{left:50%;top:15vh;transform:translateX(-50%);width:min(900px,86vw);text-align:center;--sa:.72}
+.b3{left:50%;top:15vh;transform:translateX(-50%);width:min(900px,86vw);text-align:center;--sa:.82}
 .kicker{display:block;margin-bottom:18px}
 .h-hero{font-family:var(--f-display);font-weight:700;line-height:1.04;letter-spacing:-.02em;font-size:clamp(44px,6.2vw,92px);max-width:14ch}
 .h-hero.small{font-size:clamp(38px,4.8vw,72px)}
@@ -816,7 +816,7 @@ const bands = [...document.querySelectorAll('.band')].map((el, i, arr) => ({
   first: i === 0, last: i === arr.length - 1, op: -1, k: -1
 }));
 const VIDEO_URL = 'assets/hero-scrub.mp4';
-const VIDEO_BYTES = 3379303;
+const VIDEO_BYTES = 943431;
 const POSTER_URL = 'assets/hero-poster.jpg';
 
 function heroProgress(){

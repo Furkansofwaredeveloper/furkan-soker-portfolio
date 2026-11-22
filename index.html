@@ -10,7 +10,7 @@
 <meta property="og:title" content="Furkan Söker, developer">
 <meta property="og:description" content="I build software that actually ships. Compiled, tested, delivered on the date I give you.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/og.jpg?v=2">
+<meta property="og:image" content="assets/og.jpg?v=3">
 <meta property="og:url" content="https://example.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c1220'/%3E%3Cg stroke='%23bfe3ff' stroke-width='1.6' opacity='.85'%3E%3Cpath d='M8 9v14M16 9v14M24 9v14M8 23h16'/%3E%3C/g%3E%3Ccircle cx='16' cy='23' r='3' fill='%23ff7a59'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,7 +137,7 @@ p{margin:0}
   .hero{height:auto}
   .stage{position:relative;height:auto;min-height:100svh}
   .poster,.video,.bands,.ring,.cue,.scrim{display:none}
-  .static-bg{display:block;background-image:url('assets/hero-ending.jpg?v=2');background-position:60% center}
+  .static-bg{display:block;background-image:url('assets/hero-ending.jpg?v=3');background-position:60% center}
   .static-copy{display:flex}
 }
 
@@ -233,7 +233,7 @@ section.block{position:relative;padding:clamp(96px,13vw,170px) var(--gutter)}
 /* ---------- what I build (reuses the film's ending frame) ---------- */
 #build{padding:0}
 .build-band{position:relative;min-height:88vh;display:flex;align-items:center;padding:clamp(96px,12vw,160px) var(--gutter);overflow:hidden}
-.build-band .bg{position:absolute;inset:0;background:url('assets/hero-ending.jpg?v=2') center 70%/cover;opacity:.55}
+.build-band .bg{position:absolute;inset:0;background:url('assets/hero-ending.jpg?v=3') center 70%/cover;opacity:.55}
 .build-band .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,var(--canvas) 0%,rgba(12,18,32,.35) 35%,rgba(12,18,32,.55) 70%,var(--canvas) 100%)}
 .build-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .build-grid > div{background:rgba(12,18,32,.72);padding:30px 26px 34px;min-height:220px;display:flex;flex-direction:column;gap:12px;transition:background .5s var(--ease-out)}
@@ -815,9 +815,9 @@ const bands = [...document.querySelectorAll('.band')].map((el, i, arr) => ({
   el, a: parseFloat(el.dataset.a), b: parseFloat(el.dataset.b), ramp: parseFloat(el.dataset.ramp || 0),
   first: i === 0, last: i === arr.length - 1, op: -1, k: -1
 }));
-const VIDEO_URL = 'assets/hero-scrub.mp4?v=2';
-const VIDEO_BYTES = 943431;
-const POSTER_URL = 'assets/hero-poster.jpg?v=2';
+const VIDEO_URL = 'assets/hero-scrub.mp4?v=3';
+const VIDEO_BYTES = 1241098;
+const POSTER_URL = 'assets/hero-poster.jpg?v=3';
 
 function heroProgress(){
   const r = hero.getBoundingClientRect();
